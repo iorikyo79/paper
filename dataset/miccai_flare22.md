@@ -2,6 +2,11 @@
 
 https://zenodo.org/records/7860267
 
+
+용도 : MedSAM Tuning용 데이터로 사용.
+
+
+
 MICCAI FLARE 2022 챌린지(https://flare22.grand-challenge.org/)에서 라벨링된 훈련 세트
 
 CT 이미지와 췌장 어노테이션은 http://medicaldecathlon.com/ 에서 가져왔음.
