@@ -3,17 +3,14 @@
 
 
 
-
 # 우분투에서 GPU 사용량 실시간 확인
+```shell
+# 1. 1초마다 nvidia-smi 명령을 실행 시킨다.
+nvidia-smi -| 1
 
-**1. nvidia-smi -| 1**
-- 1초마다 갱신
+# 2. 0.5초마다 nvidia-smi 화면을 갱신한다 (-n)
+watch -d -n 0.5 nvidia-smi     # 수정되는 부분만 강조 (d)
 
-
-**2. watch -d -n 0.5 nvidia-smi**
-- 0.5초마다 갱신 (-n)
-- 수정부분 강조 (d)
-
-**3. 학습도중 취소시 GPU의 PID가 남는 문제. 강제 종료 필요.**
-- kill -9 PID
- 
+# 3. 학습도중 취소시 GPU의 PID가 남을 경우 강제 삭제
+kill -9 PID
+```
